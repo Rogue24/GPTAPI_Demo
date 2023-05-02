@@ -27,6 +27,7 @@
 		1A1F93092A01214E000EB64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1F930B2A01214E000EB64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A1F93112A012258000EB64F /* GPTAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPTAPI.swift; sourceTree = "<group>"; };
+		1A1F93132A01355F000EB64F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5D4A41251B6DD3B05B0790BB /* Pods-GPTAPI_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPTAPI_Demo.debug.xcconfig"; path = "Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		91B4B1F9F29EDE30191417EA /* Pods_GPTAPI_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPTAPI_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F51E06E211D75F37A3815F /* Pods-GPTAPI_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPTAPI_Demo.release.xcconfig"; path = "Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		1A1F92F12A01214C000EB64F = {
 			isa = PBXGroup;
 			children = (
+				1A1F93132A01355F000EB64F /* README.md */,
 				1A1F92FC2A01214C000EB64F /* GPTAPI_Demo */,
 				1A1F92FB2A01214C000EB64F /* Products */,
 				E482C4A6A41A49F35B6169CE /* Pods */,

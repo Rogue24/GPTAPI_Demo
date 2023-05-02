@@ -1,6 +1,6 @@
 //
-//  ChatGPT.swift
-//  Neves
+//  GPTAPI.swift
+//  GPTAPI_Demo
 //
 //  Created by 周健平 on 2023/5/2.
 //
