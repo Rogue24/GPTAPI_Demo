@@ -8,12 +8,12 @@
 import SwiftyJSON
 
 enum GPTAPI {
-    /// ChatGPT  API URL
+    /// ChatGPT API URL
     static let apiURL = "https://api.openai.com/v1/chat/completions"
-    /// ChatGPT  API Model
+    /// ChatGPT API Model
     static let apiModel = "gpt-3.5-turbo"
-    /// ChatGPT  API Key
-    static let apiKey = ""
+    /// ChatGPT API Key
+    static let apiKey = "<#Your OpenAI API Key#>"
     
     enum Error: Swift.Error, LocalizedError {
         /// 参数错误
@@ -105,11 +105,12 @@ extension GPTAPI {
                         guard line.hasPrefix("data: "),
                               let data = line.dropFirst(6).data(using: .utf8) // 丢掉前6个字符 --- "data: "
                         else {
-                            // 某一行解析失败了
-                            print("解析失败~")
+                            // 某一帧解析失败了
+                            print("有一帧解析失败了")
                             continue
                         }
                         
+                        // 解析某一帧数据
                         let json = JSON(data)
                         
                         if let content = json["choices"][0]["delta"]["content"].string {
@@ -122,8 +123,10 @@ extension GPTAPI {
                         }
                     }
                     
+                    // 全部解析完成，结束
                     continuation.finish()
                 } catch {
+                    // 发生错误，结束
                     continuation.finish(throwing: error)
                 }
                 
