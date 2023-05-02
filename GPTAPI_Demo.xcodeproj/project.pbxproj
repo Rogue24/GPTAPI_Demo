@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A1F92FE2A01214C000EB64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F92FD2A01214C000EB64F /* AppDelegate.swift */; };
+		1A1F93002A01214C000EB64F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F92FF2A01214C000EB64F /* SceneDelegate.swift */; };
+		1A1F93022A01214C000EB64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F93012A01214C000EB64F /* ViewController.swift */; };
+		1A1F93052A01214C000EB64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F93032A01214C000EB64F /* Main.storyboard */; };
+		1A1F93072A01214E000EB64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F93062A01214E000EB64F /* Assets.xcassets */; };
+		1A1F930A2A01214E000EB64F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F93082A01214E000EB64F /* LaunchScreen.storyboard */; };
+		1A1F93122A012259000EB64F /* GPTAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F93112A012258000EB64F /* GPTAPI.swift */; };
+		F8A9800AD4FEAF810046F127 /* Pods_GPTAPI_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B4B1F9F29EDE30191417EA /* Pods_GPTAPI_Demo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A1F92FA2A01214C000EB64F /* GPTAPI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPTAPI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A1F92FD2A01214C000EB64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A1F92FF2A01214C000EB64F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1A1F93012A01214C000EB64F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A1F93042A01214C000EB64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A1F93062A01214E000EB64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A1F93092A01214E000EB64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A1F930B2A01214E000EB64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A1F93112A012258000EB64F /* GPTAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPTAPI.swift; sourceTree = "<group>"; };
+		5D4A41251B6DD3B05B0790BB /* Pods-GPTAPI_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPTAPI_Demo.debug.xcconfig"; path = "Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		91B4B1F9F29EDE30191417EA /* Pods_GPTAPI_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPTAPI_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F51E06E211D75F37A3815F /* Pods-GPTAPI_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPTAPI_Demo.release.xcconfig"; path = "Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A1F92F72A01214C000EB64F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8A9800AD4FEAF810046F127 /* Pods_GPTAPI_Demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A1F92F12A01214C000EB64F = {
+			isa = PBXGroup;
+			children = (
+				1A1F92FC2A01214C000EB64F /* GPTAPI_Demo */,
+				1A1F92FB2A01214C000EB64F /* Products */,
+				E482C4A6A41A49F35B6169CE /* Pods */,
+				DFA08678F0E6CA234EA07B81 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1A1F92FB2A01214C000EB64F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A1F92FA2A01214C000EB64F /* GPTAPI_Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A1F92FC2A01214C000EB64F /* GPTAPI_Demo */ = {
+			isa = PBXGroup;
+			children = (
+				1A1F92FD2A01214C000EB64F /* AppDelegate.swift */,
+				1A1F92FF2A01214C000EB64F /* SceneDelegate.swift */,
+				1A1F93012A01214C000EB64F /* ViewController.swift */,
+				1A1F93112A012258000EB64F /* GPTAPI.swift */,
+				1A1F93032A01214C000EB64F /* Main.storyboard */,
+				1A1F93062A01214E000EB64F /* Assets.xcassets */,
+				1A1F93082A01214E000EB64F /* LaunchScreen.storyboard */,
+				1A1F930B2A01214E000EB64F /* Info.plist */,
+			);
+			path = GPTAPI_Demo;
+			sourceTree = "<group>";
+		};
+		DFA08678F0E6CA234EA07B81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91B4B1F9F29EDE30191417EA /* Pods_GPTAPI_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E482C4A6A41A49F35B6169CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D4A41251B6DD3B05B0790BB /* Pods-GPTAPI_Demo.debug.xcconfig */,
+				D2F51E06E211D75F37A3815F /* Pods-GPTAPI_Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A1F92F92A01214C000EB64F /* GPTAPI_Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A1F930E2A01214E000EB64F /* Build configuration list for PBXNativeTarget "GPTAPI_Demo" */;
+			buildPhases = (
+				C732E3B8ADA9A724DFA0E3A5 /* [CP] Check Pods Manifest.lock */,
+				1A1F92F62A01214C000EB64F /* Sources */,
+				1A1F92F72A01214C000EB64F /* Frameworks */,
+				1A1F92F82A01214C000EB64F /* Resources */,
+				619AB3383F3EAAC08F4F51C9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPTAPI_Demo;
+			productName = GPTAPI_Demo;
+			productReference = 1A1F92FA2A01214C000EB64F /* GPTAPI_Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A1F92F22A01214C000EB64F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1A1F92F92A01214C000EB64F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 1A1F92F52A01214C000EB64F /* Build configuration list for PBXProject "GPTAPI_Demo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A1F92F12A01214C000EB64F;
+			productRefGroup = 1A1F92FB2A01214C000EB64F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A1F92F92A01214C000EB64F /* GPTAPI_Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A1F92F82A01214C000EB64F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A1F930A2A01214E000EB64F /* LaunchScreen.storyboard in Resources */,
+				1A1F93072A01214E000EB64F /* Assets.xcassets in Resources */,
+				1A1F93052A01214C000EB64F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		619AB3383F3EAAC08F4F51C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C732E3B8ADA9A724DFA0E3A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GPTAPI_Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A1F92F62A01214C000EB64F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A1F93122A012259000EB64F /* GPTAPI.swift in Sources */,
+				1A1F93022A01214C000EB64F /* ViewController.swift in Sources */,
+				1A1F92FE2A01214C000EB64F /* AppDelegate.swift in Sources */,
+				1A1F93002A01214C000EB64F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A1F93032A01214C000EB64F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A1F93042A01214C000EB64F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A1F93082A01214E000EB64F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A1F93092A01214E000EB64F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A1F930C2A01214E000EB64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A1F930D2A01214E000EB64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A1F930F2A01214E000EB64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D4A41251B6DD3B05B0790BB /* Pods-GPTAPI_Demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GPTAPI_Demo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zhoujianping.GPTAPI-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A1F93102A01214E000EB64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F51E06E211D75F37A3815F /* Pods-GPTAPI_Demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GPTAPI_Demo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zhoujianping.GPTAPI-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A1F92F52A01214C000EB64F /* Build configuration list for PBXProject "GPTAPI_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A1F930C2A01214E000EB64F /* Debug */,
+				1A1F930D2A01214E000EB64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A1F930E2A01214E000EB64F /* Build configuration list for PBXNativeTarget "GPTAPI_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A1F930F2A01214E000EB64F /* Debug */,
+				1A1F93102A01214E000EB64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A1F92F22A01214C000EB64F /* Project object */;
+}
