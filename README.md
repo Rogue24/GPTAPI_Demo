@@ -98,7 +98,7 @@ extension GPTAPI {
                     continuation.finish(throwing: error)
                 }
                 
-                // 终止回调（全部拿完了）
+                // 流终止后的回调
                 continuation.onTermination = { @Sendable status in
                     print("Stream terminated with status: \(status)")
                 }
