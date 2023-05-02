@@ -4,6 +4,7 @@
 //
 //  Created by 周健平 on 2023/5/2.
 //
+//  获取APIKey：https://platform.openai.com/account/api-keys
 
 import SwiftyJSON
 
