@@ -143,6 +143,6 @@ OK，完成。
 
 ## 最后
 
-剩下的无非就是UI、Markdown解析、数据存储和请求上下文的拼接，弄好就是一个ChatGPT的App了，本菜鸡搞不了，还有很多不足的地方要学习。
+剩下的无非就是UI、Markdown解析、数据存储和请求上下文的拼接，弄好就是一个ChatGPT的App了，本菜鸡搞不了，还有很多不懂的地方要学习。
 
 `AsyncThrowingStream`还有很多用法，再次安利这篇文章：[Swift AsyncThrowingStream 和 AsyncStream 代码实例详解](https://juejin.cn/post/7210216031536185402)），另外大神写好的ChatGPT客户端[Sensei](https://github.com/nixzhu/Sensei)，本文代码都是参考他的。
