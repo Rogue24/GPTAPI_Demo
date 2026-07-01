@@ -31,11 +31,11 @@ class ViewController: UIViewController {
     let problem3 = "帮我用Dart写一个斐波那契数算法"
     
     var isAsking = false
+    var isStreaming = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FunnyButton.shared.normalEmoji = "🤖"
-        FunnyButton.shared.touchingEmoji = "🤖"
+        view.backgroundColor = .systemBackground
         
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints { make in
@@ -117,6 +117,8 @@ class ViewController: UIViewController {
                             let attText = SendableAttributedText(attStr)
                             
                             await MainActor.run {
+                                self.isStreaming = true
+                                
                                 // UILabel做法，效果不明显
 //                                textLabel.attributedText = attText.value
 //                                let transition = CATransition()
@@ -140,6 +142,10 @@ class ViewController: UIViewController {
                         }
                     } catch {
                         await MainActor.run {
+                            if self.isStreaming {
+                                JPHUD.showError(withStatus: "请求失败 - \(error.localizedDescription)")
+                                return
+                            }
                             self.thinkingLabel.text = nil
                             self.answerLabel.text = "请求失败 - \(error.localizedDescription)"
                         }
@@ -148,6 +154,7 @@ class ViewController: UIViewController {
                     // 请求结束
                     await MainActor.run {
                         self.isAsking = false
+                        self.isStreaming = false
                     }
                 }
             }),

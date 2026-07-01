@@ -18,6 +18,17 @@ enum GPTAPI {
     /// ChatGPT API Key
     static let apiKey = "<#Your OpenAI API Key#>"
     
+    /// AI 对话生成耗时可能比较长，统一在这里调整请求可等待时长。
+    private static let requestTimeout: TimeInterval = 10 * 60 // 单次请求等待 10 分钟
+    private static let resourceTimeout: TimeInterval = 20 * 60 // 整个资源加载最多 20 分钟
+    
+    private static let session: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = requestTimeout
+        configuration.timeoutIntervalForResource = resourceTimeout
+        return URLSession(configuration: configuration)
+    }()
+    
     enum Error: Swift.Error, LocalizedError {
         /// 参数错误
         case parameterWrong
@@ -77,6 +88,7 @@ enum GPTAPI {
         if !apiKey.isEmpty {
             request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
         }
+        request.timeoutInterval = requestTimeout
         request.httpBody = jsonData
         
         return request
@@ -111,7 +123,7 @@ extension GPTAPI {
     static func ask(_ problem: String) async throws -> AsyncThrowingStream<Delta, Swift.Error> {
         let request = try createRequest(problem)
         
-        let (result, rsp) = try await URLSession.shared.bytes(for: request)
+        let (result, rsp) = try await session.bytes(for: request)
         
         try checkResponse(rsp)
         
@@ -183,7 +195,7 @@ extension GPTAPI {
             return nil
         }
         
-        let task = URLSession.shared.dataTask(with: request) { data, rsp, error in
+        let task = session.dataTask(with: request) { data, rsp, error in
             if let error = error {
                 DispatchQueue.main.async { complete(.failure(error)) }
                 return
@@ -214,7 +226,7 @@ extension GPTAPI {
     static func ask(_ problem: String) async throws -> String {
         let request = try createRequest(problem, isStream: false)
         
-        let (data, rsp) = try await URLSession.shared.data(for: request)
+        let (data, rsp) = try await session.data(for: request)
         
         try checkResponse(rsp)
         

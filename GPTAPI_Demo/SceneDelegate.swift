@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FunnyButton
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,10 +17,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.window = window
+        }
+        window.rootViewController = ViewController()
         
         JPHUD.setMaxSupportedWindowLevel(.alert)
         JPHUD.setMinimumDismissTimeInterval(1.3)
+        
+        FunnyButton.shared.normalEmoji = "🤖"
+        FunnyButton.shared.touchingEmoji = "🤖"
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
