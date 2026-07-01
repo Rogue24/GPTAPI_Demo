@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00119FE42FF4E905006F27FE /* StreamingFadeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00119FE32FF4E905006F27FE /* StreamingFadeLabel.swift */; };
+		00119FE62FF4FA30006F27FE /* JPHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00119FE52FF4FA30006F27FE /* JPHUD.swift */; };
+		00119FE82FF4FBC6006F27FE /* Asyncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00119FE72FF4FBC6006F27FE /* Asyncs.swift */; };
 		1A1F92FE2A01214C000EB64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F92FD2A01214C000EB64F /* AppDelegate.swift */; };
 		1A1F93002A01214C000EB64F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F92FF2A01214C000EB64F /* SceneDelegate.swift */; };
 		1A1F93022A01214C000EB64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F93012A01214C000EB64F /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00119FE32FF4E905006F27FE /* StreamingFadeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingFadeLabel.swift; sourceTree = "<group>"; };
+		00119FE52FF4FA30006F27FE /* JPHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPHUD.swift; sourceTree = "<group>"; };
+		00119FE72FF4FBC6006F27FE /* Asyncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncs.swift; sourceTree = "<group>"; };
 		1A1F92FA2A01214C000EB64F /* GPTAPI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPTAPI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1F92FD2A01214C000EB64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A1F92FF2A01214C000EB64F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +76,10 @@
 				1A1F92FD2A01214C000EB64F /* AppDelegate.swift */,
 				1A1F92FF2A01214C000EB64F /* SceneDelegate.swift */,
 				1A1F93012A01214C000EB64F /* ViewController.swift */,
+				00119FE32FF4E905006F27FE /* StreamingFadeLabel.swift */,
 				1A1F93112A012258000EB64F /* GPTAPI.swift */,
+				00119FE52FF4FA30006F27FE /* JPHUD.swift */,
+				00119FE72FF4FBC6006F27FE /* Asyncs.swift */,
 				1A1F93032A01214C000EB64F /* Main.storyboard */,
 				1A1F93062A01214E000EB64F /* Assets.xcassets */,
 				1A1F93082A01214E000EB64F /* LaunchScreen.storyboard */,
@@ -107,7 +116,7 @@
 				1A1F92F62A01214C000EB64F /* Sources */,
 				1A1F92F72A01214C000EB64F /* Frameworks */,
 				1A1F92F82A01214C000EB64F /* Resources */,
-				619AB3383F3EAAC08F4F51C9 /* [CP] Embed Pods Frameworks */,
+				F5245B9455D43E3AC4A52D7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,23 +174,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		619AB3383F3EAAC08F4F51C9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C732E3B8ADA9A724DFA0E3A5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +196,27 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F5245B9455D43E3AC4A52D7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GPTAPI_Demo/Pods-GPTAPI_Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -212,9 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1F93122A012259000EB64F /* GPTAPI.swift in Sources */,
+				00119FE62FF4FA30006F27FE /* JPHUD.swift in Sources */,
 				1A1F93022A01214C000EB64F /* ViewController.swift in Sources */,
 				1A1F92FE2A01214C000EB64F /* AppDelegate.swift in Sources */,
 				1A1F93002A01214C000EB64F /* SceneDelegate.swift in Sources */,
+				00119FE42FF4E905006F27FE /* StreamingFadeLabel.swift in Sources */,
+				00119FE82FF4FBC6006F27FE /* Asyncs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GPTAPI_Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -370,7 +387,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "zhoujianping.GPTAPI-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_ENABLE_EXPLICIT_MODULES = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -400,7 +418,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

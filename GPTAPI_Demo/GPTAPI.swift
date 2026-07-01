@@ -39,7 +39,7 @@ enum GPTAPI {
     }
     
     private static func createRequest(_ problem: String, isStream: Bool = true) throws -> URLRequest {
-        guard apiURL.count > 0, apiModel.count > 0, apiKey.count > 0 else {
+        guard apiURL.count > 0, apiModel.count > 0 else {
             throw Self.Error.parameterWrong
         }
         
@@ -55,6 +55,10 @@ enum GPTAPI {
             "model": apiModel,
             "messages": messages,
         ]
+        
+        // 关闭深度思考？
+//        json["think"] = false
+        
         // 想一个请求拿到完整的一个回答就不用写这两个参数
         if isStream {
             json["temperature"] = 0.5
@@ -69,8 +73,10 @@ enum GPTAPI {
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        if !apiKey.isEmpty {
+            request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        }
         request.httpBody = jsonData
         
         return request
@@ -82,6 +88,8 @@ enum GPTAPI {
         }
         
         guard 200...299 ~= response.statusCode else {
+            print("statusCode: \(response.statusCode)")
+            print("description: \(response.description)")
             throw Self.Error.invalidResponse
         }
     }
@@ -90,14 +98,24 @@ enum GPTAPI {
 // MARK: - 流式获取一个回答
 @available(iOS 15.0, *)
 extension GPTAPI {
-    static func ask(_ problem: String) async throws -> AsyncThrowingStream<String, Swift.Error> {
+    enum ContentType {
+        case thinking
+        case answer
+    }
+    
+    struct Delta {
+        let type: ContentType
+        let text: String
+    }
+    
+    static func ask(_ problem: String) async throws -> AsyncThrowingStream<Delta, Swift.Error> {
         let request = try createRequest(problem)
         
         let (result, rsp) = try await URLSession.shared.bytes(for: request)
         
         try checkResponse(rsp)
         
-        return AsyncThrowingStream<String, Swift.Error> { continuation in
+        return AsyncThrowingStream<Delta, Swift.Error> { continuation in
             Task(priority: .userInitiated) {
                 do {
                     for try await line in result.lines {
@@ -116,8 +134,18 @@ extension GPTAPI {
                         // 解析某一帧数据
                         let json = JSON(data)
                         
-                        if let content = json["choices"][0]["delta"]["content"].string {
-                            continuation.yield(content)
+//                        let dict = json.dictionaryObject ?? [:]
+//                        print("jjjjjjp~~~ \(dict)")
+                        
+                        let delta = json["choices"][0]["delta"]
+                        
+                        // 不一定是"reasoning"，可能是"reasoning_content"、"thinking"，或者直接混在"content"里。
+                        if let content = delta["reasoning"].string {
+                            continuation.yield(.init(type: .thinking, text: content))
+                        }
+                        
+                        if let content = delta["content"].string {
+                            continuation.yield(.init(type: .answer, text: content))
                         }
                         
                         if let finishReason = json["choices"][0]["finish_reason"].string, finishReason == "stop" {
