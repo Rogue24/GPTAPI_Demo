@@ -11,6 +11,7 @@
 		00119FE62FF4FA30006F27FE /* JPHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00119FE52FF4FA30006F27FE /* JPHUD.swift */; };
 		00119FE82FF4FBC6006F27FE /* Asyncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00119FE72FF4FBC6006F27FE /* Asyncs.swift */; };
 		00119FEA2FF51C17006F27FE /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00119FE92FF51C17006F27FE /* Env.swift */; };
+		00119FEC2FF64A10006F27FE /* JPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00119FEB2FF64A10006F27FE /* JPrint.swift */; };
 		1A1F92FE2A01214C000EB64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F92FD2A01214C000EB64F /* AppDelegate.swift */; };
 		1A1F93002A01214C000EB64F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F92FF2A01214C000EB64F /* SceneDelegate.swift */; };
 		1A1F93022A01214C000EB64F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F93012A01214C000EB64F /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		00119FE52FF4FA30006F27FE /* JPHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPHUD.swift; sourceTree = "<group>"; };
 		00119FE72FF4FBC6006F27FE /* Asyncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncs.swift; sourceTree = "<group>"; };
 		00119FE92FF51C17006F27FE /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		00119FEB2FF64A10006F27FE /* JPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPrint.swift; sourceTree = "<group>"; };
 		1A1F92FA2A01214C000EB64F /* GPTAPI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPTAPI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1F92FD2A01214C000EB64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A1F92FF2A01214C000EB64F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				00119FE52FF4FA30006F27FE /* JPHUD.swift */,
 				00119FE72FF4FBC6006F27FE /* Asyncs.swift */,
 				00119FE92FF51C17006F27FE /* Env.swift */,
+				00119FEB2FF64A10006F27FE /* JPrint.swift */,
 				1A1F93032A01214C000EB64F /* Main.storyboard */,
 				1A1F93062A01214E000EB64F /* Assets.xcassets */,
 				1A1F93082A01214E000EB64F /* LaunchScreen.storyboard */,
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00119FEC2FF64A10006F27FE /* JPrint.swift in Sources */,
 				1A1F93122A012259000EB64F /* GPTAPI.swift in Sources */,
 				00119FE62FF4FA30006F27FE /* JPHUD.swift in Sources */,
 				1A1F93022A01214C000EB64F /* ViewController.swift in Sources */,

@@ -18,4 +18,16 @@ enum Env {
         return window.safeAreaInsets
     }
     
+    /// 屏幕尺寸
+    static var screenSize: CGSize { screenBounds.size }
+    /// 屏幕宽度
+    static var screenWidth: CGFloat { screenBounds.width }
+    /// 屏幕高度
+    static var screenHeight: CGFloat { screenBounds.height }
+    /// 屏幕区域
+    static var screenBounds: CGRect {
+        guard let window = mainWindow else { return .zero }
+        return window.bounds
+    }
+    
 }
