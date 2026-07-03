@@ -33,29 +33,49 @@ class ViewController: UIViewController {
     var isAsking = false
     var isStreaming = false
     
+    static let inset: CGFloat = 16
+    static let textMaxWidth: CGFloat = Env.screenWidth - inset - inset
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         
+        var insets = Env.safeAreaInsets
+        insets.top += Self.inset
+        insets.left += Self.inset
+        insets.right += Self.inset
+        insets.bottom += Self.inset
+        
+        scrollView.contentInsetAdjustmentBehavior = .never
+        scrollView.contentInset = insets
+        scrollView.frame = Env.screenBounds
         view.addSubview(scrollView)
-        scrollView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide).inset(20)
-        }
         
         thinkingLabel.numberOfLines = 0
+        thinkingLabel.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: Self.textMaxWidth,
+            height: 0
+        )
         scrollView.addSubview(thinkingLabel)
-        thinkingLabel.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            make.leading.top.trailing.equalToSuperview()
-        }
         
         answerLabel.numberOfLines = 0
+        answerLabel.frame = CGRect(
+            x: thinkingLabel.frame.origin.x,
+            y: thinkingLabel.frame.maxY,
+            width: Self.textMaxWidth,
+            height: 0
+        )
         scrollView.addSubview(answerLabel)
-        answerLabel.snp.makeConstraints { make in
-            make.top.equalTo(thinkingLabel.snp.bottom)
-            make.width.equalTo(thinkingLabel)
-            make.leading.bottom.trailing.equalToSuperview()
-        }
+        
+        scrollView.contentSize = CGSize(
+            width: 0,
+            height: answerLabel.frame.maxY
+        )
+        
+//        thinkingLabel.backgroundColor = .red
+//        answerLabel.backgroundColor = .green
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,7 +92,7 @@ class ViewController: UIViewController {
                 
                 self.isAsking = true
                 
-                print("开始请求")
+                JPrint("开始请求")
                 self.thinkingLabel.text = "正在请求..."
                 self.answerLabel.text = nil
                 
@@ -116,6 +136,12 @@ class ViewController: UIViewController {
                             
                             let attText = SendableAttributedText(attStr)
                             
+                            var textHeight = await attStr?.boundingRect(with: CGSize(width: Self.textMaxWidth, height: .infinity), options: .usesLineFragmentOrigin, context: nil).size.height ?? 0
+                            if textHeight > 0 {
+                                textHeight += 2
+                            }
+//                            JPrint("textHeight:", textHeight)
+                            
                             await MainActor.run {
                                 self.isStreaming = true
                                 
@@ -126,18 +152,19 @@ class ViewController: UIViewController {
 //                                transition.duration = 1
 //                                textLabel.layer.add(transition, forKey: nil)
                                 
+                                textLabel.frame.size.height = textHeight
                                 textLabel.setStreamingAttributedText(attText.value)
                                 
-//                                if self.scrollView.isDragging || self.scrollView.isTracking {
-//                                    return
-//                                }
-//                                UIView.animate(withDuration: 0.3) {
-//                                    self.scrollView.layoutIfNeeded()
-//                                    if self.scrollView.contentSize.height > self.scrollView.bounds.height {
-//                                        let offsetY = self.scrollView.contentSize.height - self.scrollView.bounds.height
-//                                        self.scrollView.contentOffset = CGPoint(x: 0, y: offsetY)
-//                                    }
-//                                }
+                                if textLabel === self.thinkingLabel {
+                                    self.answerLabel.frame.origin.y = textHeight
+                                }
+                                
+                                UIView.animate(withDuration: 0.3) {
+                                    self.scrollView.contentSize = CGSize(
+                                        width: 0,
+                                        height: self.answerLabel.frame.maxY
+                                    )
+                                }
                             }
                         }
                     } catch {
